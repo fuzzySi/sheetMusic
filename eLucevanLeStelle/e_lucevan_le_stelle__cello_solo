@@ -1,0 +1,55 @@
+\version "2.18.2"
+
+\header {
+  title = "E lucevan le stelle"
+  composer = "Puccini"
+  instrument = "Cello solo"
+
+}
+
+global = {
+  \language "english"
+  \time 3/4
+  \key b \minor
+   \clef bass
+  
+}
+
+
+melody = \relative c' {
+  \global
+  b4. b8 ([cs d] | g,4) ~ g8. [g16](a b cs d) |
+  e8-- [fs-- g-- a--] \grace { g16 a16 } g8.-- e16( | fs4) fs2 | 
+  r16 fs,16-- cs'-- d-- e (fs e d) \grace { cs16 (d16 } cs8.) fs,16 |
+  b4. b8 (cs d |
+  g4) g2 ~ g8 [g-- g-- g--] e8. cs16( |
+  fs4.) b,8( [cs d]) | r8 e8-- [e-- e--] cs8. as16( |
+  d4) d2 \bar"||" \time 4/4 
+  r8 a,8( [e' f]) g (a) g16 ([f e a,]) \bar"||"  \time 3/4
+  d8 d4. cs8. fs,16 | b2. \bar"||" \time 4/4
+  r8 fs ([cs' d]) e (fs) e16 (d cs16.) fs,32( \bar"||" \time 3/4
+  b4) ~ b8 b( cs d | g4 ~ g8.) g16 a (b) cs (d) | 
+  e8\noBeam fs\noBeam g\noBeam a\noBeam g8. e16 | fs4 fs 2 |
+  r16 fs,,(cs') d e (fs e d) \grace { cs16 (d16 } cs8.) fs,16( | 
+  b4.) b8( cs d | g4) g2 ~ | g8 g\noBeam g\noBeam g\noBeam \tuplet 3/2 {e4 cs8} | fs4 fs2 |
+  r8 e-- e--\noBeam e--\noBeam cs8. as16 | d4 d2 \bar"||" \time 4/4
+  r8 a\noBeam e'\noBeam f\noBeam g\noBeam a\noBeam g16 f e a, \bar"||" \time 3/4
+  d8 d\noBeam ~ d fs,4. | b2. \bar "|."
+  
+  
+  
+}
+
+words = \lyricmode {
+  
+  
+}
+
+\score {
+  <<
+    \new Staff { \melody }
+    \addlyrics { \words }
+  >>
+  \layout { }
+  \midi { }
+}
